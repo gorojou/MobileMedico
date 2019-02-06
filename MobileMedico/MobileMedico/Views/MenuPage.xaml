@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileMedico.Views.MenuPage"
+             xmlns:local="clr-namespace:MobileMedico.CustomRenderer;assembly=MobileMedico">
+ <ContentPage.Content>
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 20, 0, 0">
+    <Button Clicked="OnClickProfile" Text="Edit Profile" BackgroundColor="#0498E2" HorizontalOptions="Center" VerticalOptions="Center"/>
+    <Button Clicked="OnClickLogout" Text="Log Out" BackgroundColor="#0498E2" HorizontalOptions="Center" VerticalOptions="Center"/>
+  </StackLayout>
+</ContentPage.Content>
+</ContentPage>

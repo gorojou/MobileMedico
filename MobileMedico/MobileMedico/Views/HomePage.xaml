@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileMedico.Views.HomePage" xmlns:VM="clr-namespace:MobileMedico.ViewModels"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem x:Name="Menu" Icon="hamburgerMenu.png" Order="Default" Priority="3"  Clicked="ToolbarItem_Clicked" ></ToolbarItem>
+  </ContentPage.ToolbarItems>
+  
+	<ContentPage.Content>
+		<ListView  x:Name="lstView" RowHeight="60">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="Fill"  BackgroundColor="Blue">
+              <controls:CircleImage x:Name="image" Source="{Binding ImagePatient}"  BorderColor = "#EA4B35" FillColor = "#EA4B35" BorderThickness = "1" Aspect = "AspectFill"  HorizontalOptions="StartAndExpand"/>
+
+              <StackLayout Orientation="Vertical">
+								<Label Text = "{Binding NamePatient}" FontSize="24" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40"/>
+								<Label Text = "{Binding LastNamePatient}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+							</StackLayout>
+
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+  
+  </ContentPage>
